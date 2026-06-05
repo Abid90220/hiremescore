@@ -1,4 +1,4 @@
-import { cn } from "~/lib/utils";
+import { assetPath, cn } from "~/lib/utils";
 import {
     Accordion,
     AccordionContent,
@@ -19,7 +19,7 @@ const ScoreBadge = ({ score }: { score: number }) => {
             )}
         >
             <img
-                src={score > 69 ? "/icons/check.svg" : "/icons/warning.svg"}
+                src={assetPath(score > 69 ? "icons/check.svg" : "icons/warning.svg")}
                 alt="score"
                 className="size-4"
             />
@@ -66,7 +66,7 @@ const CategoryContent = ({
                     <div className="flex flex-row gap-2 items-center" key={index}>
                         <img
                             src={
-                                tip.type === "good" ? "/icons/check.svg" : "/icons/warning.svg"
+                                assetPath(tip.type === "good" ? "icons/check.svg" : "icons/warning.svg")
                             }
                             alt="score"
                             className="size-5"
@@ -90,8 +90,8 @@ const CategoryContent = ({
                             <img
                                 src={
                                     tip.type === "good"
-                                        ? "/icons/check.svg"
-                                        : "/icons/warning.svg"
+                                        ? assetPath("icons/check.svg")
+                                        : assetPath("icons/warning.svg")
                                 }
                                 alt="score"
                                 className="size-5"

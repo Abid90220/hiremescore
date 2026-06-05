@@ -19,3 +19,8 @@ export function formatSize(bytes: number): string {
 }
 
 export const generateUUID = () => crypto.randomUUID();
+
+export function assetPath(path: string) {
+    const base = import.meta.env.BASE_URL || "/";
+    return `${base.replace(/\/$/, "")}/${path.replace(/^\//, "")}`;
+}

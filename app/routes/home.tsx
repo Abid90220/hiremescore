@@ -4,10 +4,11 @@ import ResumeCard from "~/components/ResumeCard";
 import {usePuterStore} from "~/lib/puter";
 import {Link, useNavigate} from "react-router";
 import {useEffect, useState} from "react";
+import {assetPath} from "~/lib/utils";
 
 export function meta({}: Route.MetaArgs) {
     return [
-        { title: "Resumind" },
+        { title: "HireMeScore" },
         { name: "description", content: "Smart feedback for your dream job!" },
     ];
 }
@@ -39,7 +40,7 @@ export default function Home() {
         loadResumes()
     }, []);
 
-    return <main className="bg-[url('/images/bg-main.svg')] bg-cover">
+    return <main className="bg-cover" style={{ backgroundImage: `url(${assetPath("images/bg-main.svg")})` }}>
         <Navbar />
 
         <section className="main-section">
@@ -53,7 +54,7 @@ export default function Home() {
             </div>
             {loadingResumes && (
                 <div className="flex flex-col items-center justify-center">
-                    <img src="/images/resume-scan-2.gif" className="w-[200px]" />
+                    <img src={assetPath("images/resume-scan-2.gif")} className="w-[200px]" />
                 </div>
             )}
 

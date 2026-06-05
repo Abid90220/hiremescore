@@ -11,8 +11,11 @@ import type { Route } from "./+types/root";
 import "./app.css";
 import {usePuterStore} from "~/lib/puter";
 import {useEffect} from "react";
+import {assetPath} from "~/lib/utils";
 
 export const links: Route.LinksFunction = () => [
+    { rel: "icon", type: "image/png", href: assetPath("favicon.png") },
+    { rel: "shortcut icon", href: assetPath("favicon.ico") },
     { rel: "preconnect", href: "https://fonts.googleapis.com" },
     {
         rel: "preconnect",

@@ -4,7 +4,7 @@ import FileUploader from "~/components/FileUploader";
 import {usePuterStore} from "~/lib/puter";
 import {useNavigate} from "react-router";
 import {convertPdfToImage} from "~/lib/pdf2img";
-import {generateUUID} from "~/lib/utils";
+import {assetPath, generateUUID} from "~/lib/utils";
 import {prepareInstructions} from "../../constants";
 
 const getErrorMessage = (error: unknown) => {
@@ -114,7 +114,7 @@ const Upload = () => {
     }
 
     return (
-        <main className="bg-[url('/images/bg-main.svg')] bg-cover">
+        <main className="bg-cover" style={{ backgroundImage: `url(${assetPath("images/bg-main.svg")})` }}>
             <Navbar />
 
             <section className="main-section">
@@ -123,7 +123,7 @@ const Upload = () => {
                     {isProcessing ? (
                         <>
                             <h2>{statusText}</h2>
-                            <img src="/images/resume-scan.gif" className="w-full" />
+                            <img src={assetPath("images/resume-scan.gif")} className="w-full" />
                         </>
                     ) : (
                         <>

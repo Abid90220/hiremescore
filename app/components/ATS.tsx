@@ -1,4 +1,4 @@
-import { cn } from "~/lib/utils";
+import { assetPath, cn } from "~/lib/utils";
 
 const ATS = ({
                  score,
@@ -22,10 +22,10 @@ const ATS = ({
                 <img
                     src={
                         score > 69
-                            ? "/icons/ats-good.svg"
+                            ? assetPath("icons/ats-good.svg")
                             : score > 49
-                                ? "/icons/ats-warning.svg"
-                                : "/icons/ats-bad.svg"
+                                ? assetPath("icons/ats-warning.svg")
+                                : assetPath("icons/ats-bad.svg")
                     }
                     alt="ATS"
                     className="w-10 h-10"
@@ -45,8 +45,8 @@ const ATS = ({
                         <img
                             src={
                                 suggestion.type === "good"
-                                    ? "/icons/check.svg"
-                                    : "/icons/warning.svg"
+                                    ? assetPath("icons/check.svg")
+                                    : assetPath("icons/warning.svg")
                             }
                             alt="ATS"
                             className="w-4 h-4"
