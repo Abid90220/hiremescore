@@ -1,87 +1,58 @@
-# Welcome to React Router!
+# HireMeScore
 
-A modern, production-ready template for building full-stack React applications using React Router.
+HireMeScore is a resume analysis app that helps users upload a PDF resume, compare it against a job description, and get AI-powered feedback with an ATS-style score.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+Live site: https://abid90220.github.io/hiremescore/
 
-## Features
+## What It Does
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- Upload a PDF resume
+- Add company, role, and job description details
+- Convert the resume into a preview image
+- Analyze the resume with AI feedback
+- Show an overall score, ATS score, and improvement tips
+- Save previous resume reviews for later
 
-## Getting Started
+## Tech Stack
 
-### Installation
+- React
+- React Router
+- TypeScript
+- Tailwind CSS
+- Puter
+- Vite
+- GitHub Pages
 
-Install the dependencies:
+## Run Locally
+
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-### Development
-
-Start the development server with HMR:
+Start the development server:
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
+Build for production:
 
 ```bash
 npm run build
 ```
 
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
+Run type checks:
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+npm run typecheck
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+## Deployment
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+This project is deployed with GitHub Pages using GitHub Actions. The workflow builds the app and publishes the static output from `build/client`.
 
-### DIY Deployment
+The deployed app is available at:
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+https://abid90220.github.io/hiremescore/
